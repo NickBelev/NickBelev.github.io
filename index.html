@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicholas Belev</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- EmailJS Setup -->
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function() {
+      emailjs.init("G0RwnMVfhY_HLkWoI");
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Nicholas Belev" width="80" class="rounded-glow avatar-image">
+        </figure>        
+
+        <div class="info-content">
+          <h1 class="name" title="Nicholas Belev">Nicholas Belev</h1>
+          <div class="title-container">
+            <p id="dynamic-title" class="title">Software Engineer</p>
+          </div>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Contacts Menu</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:nicholas.belev@gmail.com" class="contact-link">nicholas.belev@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+16178936652" class="contact-link">+1 (617) 893-6652</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Graduation</p>
+
+              <time datetime="1982-06-23">May, 2026</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Boston, MA, USA</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/nicholas-belev-7922a3228/" target="_blank" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/NickBelev" target="_blank" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/mcgillsailing/?hl=en" target="_blank" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>News</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About Me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            <span class="intro">Hello, I'm Nick!</span>
+            <br><br>
+            I'm a junior at <strong>McGill University</strong>, studying <strong>Computer Science</strong> and <strong>Artificial Intelligence</strong> with a Business Minor in Finance. 
+            I am currently seeking an internship in the <strong>finance and technology industry</strong>, where I can apply my analytical and problem-solving skills to tackle complex challenges while honing my programming and business acumen in a professional setting.
+            <br><br>
+            My academic and personal projects have helped me build a strong foundation in <strong>data science, software development</strong>, and <strong>quantitative finance</strong>, while my extracurricular roles, such as leading and competing on McGill's <strong>Sailing Team</strong>, have strengthened my <strong>leadership, teamwork</strong>, and <strong>organizational abilities</strong>. 
+            <br><br>
+            I am eager to contribute to impactful initiatives that merge <strong>technology</strong> and <strong>finance</strong>, and I’m committed to continuous growth in a collaborative corporate environment.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">My Focus</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/coding.png" alt="coding icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Computer Science</h4>
+
+                <p class="service-item-text">
+                  Proficient in various programming paradigms: scripting, visualization, OOP, and functional. Skilled in data structures, core algorithms, and practical AI applications.                
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/database.png" alt="database icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Data Science</h4>
+
+                <p class="service-item-text">
+                  Experienced Data Scientist with a proven track record in SQL, web apps and servers, AWS, Docker containerization for data-fetching solutions, data visualization.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/project-management.png
+                " alt="project management icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Project Management</h4>
+
+                <p class="service-item-text">
+                  Lead financial operations as McGill Sailing Team Treasurer, managing budgets, ensuring tax compliance, forecasting expenses, and creating financial reports to support strategic decision-making.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/finance.png" alt="finance icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Quantitative Finance</h4>
+
+                <p class="service-item-text">
+                  Risk evaluation with statistical models and software. Securities monitoring through financial statements and technical analysis.  Developer of "Householding" Portfolio Optimization method.                
+                </p>
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - Tools
+        -->
+
+        <section class="programming_tools">
+
+          <h3 class="h3 programming_tools-title">Programming Tools</h3>
+
+          <ul class="programming_tools-list has-scrollbar">
+
+            <!-- Python -->
+            <li class="programming_tools-item">
+              <div class="content-card" data-programming_tools-item>
+
+                <figure class="programming_tools-avatar-box">
+                  <img src="./assets/images/python-logo.png" alt="Python" width="60" data-programming_tools-avatar>
+                </figure>
+
+                <h4 class="h4 programming_tools-item-title" data-programming_tools-title>Python</h4>
+
+                <div class="programming_tools-text" data-programming_tools-text>
+                  <p>
+                    Expertise in Python for data analysis, machine learning, and automation. Experienced with libraries such as Pandas, NumPy, and frameworks like FastAPI.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <!-- SQL and Databases -->
+            <li class="programming_tools-item">
+              <div class="content-card" data-programming_tools-item>
+
+                <figure class="programming_tools-avatar-box">
+                  <img src="./assets/images/sql-logo.png" alt="SQL and Databases" width="60" data-programming_tools-avatar>
+                </figure>
+
+                <h4 class="h4 programming_tools-item-title" data-programming_tools-title>SQL / Databases</h4>
+
+                <div class="programming_tools-text" data-programming_tools-text>
+                  <p>
+                    Proficient in Microsoft SQL Server, PostgreSQL, and SQLite for efficient database management and querying. Skilled in Python SQL APIs like PyODBC for integration.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <!-- Docker -->
+            <li class="programming_tools-item">
+              <div class="content-card" data-programming_tools-item>
+
+                <figure class="programming_tools-avatar-box">
+                  <img src="./assets/images/docker-logo.png" alt="Docker" width="60" data-programming_tools-avatar>
+                </figure>
+
+                <h4 class="h4 programming_tools-item-title" data-programming_tools-title>Docker</h4>
+
+                <div class="programming_tools-text" data-programming_tools-text>
+                  <p>
+                    Skilled in using Docker to containerize applications for consistent development and deployment environments, ensuring scalability and portability.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <!-- Java -->
+            <li class="programming_tools-item">
+              <div class="content-card" data-programming_tools-item>
+
+                <figure class="programming_tools-avatar-box">
+                  <img src="./assets/images/java-logo.png" alt="Java" width="60" data-programming_tools-avatar>
+                </figure>
+
+                <h4 class="h4 programming_tools-item-title" data-programming_tools-title>Java</h4>
+
+                <div class="programming_tools-text" data-programming_tools-text>
+                  <p>
+                    Familiar with Java design patterns and data structures, including trees, graphs, and hash maps, applied to software development projects.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <!-- C -->
+            <li class="programming_tools-item">
+              <div class="content-card" data-programming_tools-item>
+
+                <figure class="programming_tools-avatar-box">
+                  <img src="./assets/images/c-logo.png" alt="C / C++" width="60" data-programming_tools-avatar>
+                </figure>
+
+                <h4 class="h4 programming_tools-item-title" data-programming_tools-title>C / C++</h4>
+
+                <div class="programming_tools-text" data-programming_tools-text>
+                  <p>
+                    Experienced in low-level programming with C, focusing on concurrency, operating-system level development, and memory management.  Experienced with file manipulation to in-memory data structures in C++.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <!-- OCaml -->
+            <li class="programming_tools-item">
+              <div class="content-card" data-programming_tools-item>
+
+                <figure class="programming_tools-avatar-box">
+                  <img src="./assets/images/ocaml-logo.png" alt="OCaml" width="60" data-programming_tools-avatar>
+                </figure>
+
+                <h4 class="h4 programming_tools-item-title" data-programming_tools-title>OCaml</h4>
+
+                <div class="programming_tools-text" data-programming_tools-text>
+                  <p>
+                    Built a functional programming language using OCaml, implementing lambda calculus concepts and mastering tail recursion with continuations.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <!-- Linux/Unix Proficiency -->
+            <li class="programming_tools-item">
+              <div class="content-card" data-programming_tools-item>
+
+                <figure class="programming_tools-avatar-box">
+                  <img src="./assets/images/linux-logo.png" alt="Linux / Unix" width="60" data-programming_tools-avatar>
+                </figure>
+
+                <h4 class="h4 programming_tools-item-title" data-programming_tools-title>Linux / Unix</h4>
+
+                <div class="programming_tools-text" data-programming_tools-text>
+                  <p>
+                    Extensive experience with Linux and Unix systems, proficient in shell scripting and environment management for development workflows.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+
+        <!--
+          - programming_tools modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="programming_tools-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/python-logo.png" alt="Python" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.png" alt="quote icon" class="quote-icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Python</h4>
+
+              <time datetime="2021-06-14">December, 2024</time>
+
+              <div data-modal-text>
+                <p>
+                  Expertise in Python for data analysis, machine learning, and automation. Experienced with libraries such as Pandas, NumPy, and frameworks like FastAPI.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Worked With</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="https://www.northinfo.com/" target="_blank">
+                <img src="./assets/images/logo-1-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://www.santanderbank.com/" target="_blank">
+                <img src="./assets/images/logo-2-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://www.mcgillsailing.com/" target="_blank">
+                <img src="./assets/images/logo-3-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://bostonsailingcenter.com/" target="_blank">
+                <img src="./assets/images/logo-4-color.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        
+
+        
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+        
+            <h3 class="h3">Education</h3>
+          </div>
+        
+          <ol class="timeline-list">
+        
+            <li class="timeline-item">
+        
+              <h4 class="h4 timeline-item-title">
+                <strong>Bachelor of Science in Computer Science & AI</strong>&nbsp;&nbsp;—&nbsp;&nbsp;<strong>McGill University</strong>
+              </h4>
+        
+              <span><em>2022 — 2026</em></span>
+        
+              <p class="timeline-text">
+                <strong>GPA:</strong> 3.94<br><br>
+                <strong>Major:</strong> Computer Science & Artificial Intelligence, Faculty of Science<br>
+                <strong>Minor:</strong> Management & Finance, Désautels Faculty of Management<br><br>
+        
+                <strong>Key Coursework:</strong> Data Science, Statistics, Finance, Artificial Intelligence, Software Design, Data Structures and Algorithms, Operating Systems, Computing Systems, Financial Accounting, Macroeconomics, International Business<br><br>
+        
+                <strong>Leadership & Activities:</strong><br>
+                ◆ <strong>Ambassador</strong> to La Citadelle Residence on McGill Residence Hall Council (<em>2022 — 2023</em>)<br>
+                ◆ <strong>Treasurer</strong>, McGill Sailing Team (<em>2023 — 2025</em>)<br>
+                ◆ <strong>Varsity-Level Competitor</strong>, McGill Sailing Team (<em>2022 — 2025</em>)<br>
+              </p>
+        
+            </li>
+        
+            <li class="timeline-item">
+        
+              <h4 class="h4 timeline-item-title"><strong>Additional Coursework</strong></h4>
+        
+              <span><em>2020 — 2022</em></span>
+        
+              <p class="timeline-text">
+                <strong>Selected Courses:</strong><br>
+                ◆ <strong>Cybersecurity Foundations</strong>&nbsp;&nbsp;—&nbsp;&nbsp;Google Cloud<br>
+                ◆ <strong>Data Visualization in JavaScript</strong>&nbsp;&nbsp;—&nbsp;&nbsp;UMass Amherst<br>
+                ◆ <strong>Stock Market and Investment Research</strong>&nbsp;&nbsp;—&nbsp;&nbsp;Bentley University<br>
+                ◆ <strong>Artificial Intelligence Fluency</strong>&nbsp;&nbsp;—&nbsp;&nbsp;Adava University<br>
+              </p>
+        
+            </li>
+        
+            <li class="timeline-item">
+        
+              <h4 class="h4 timeline-item-title">
+                <strong>High School Diploma</strong>&nbsp;&nbsp;—&nbsp;&nbsp;<strong>Natick High School</strong>
+              </h4>
+        
+              <span><em>2018 — 2022</em></span>
+        
+              <p class="timeline-text">
+                <strong>GPA:</strong> 4.62<br><br>
+                <strong>Honors & Activities:</strong><br>
+                ◆ Member of <strong>National Honors Society</strong> (<em>2021 — Present</em>)<br>
+                ◆ <strong>Captain</strong> of NHS Sailing Team (<em>2021 — 2022</em>)<br>
+                ◆ <strong>Sailing Team Competitor</strong> (<em>2018 — 2022</em>)<br>
+                ◆ Founder and Leader of <strong>NHS Coding Club</strong> (<em>2021 — 2022</em>)<br>
+                ◆ <strong>Speech and Debate Competitor</strong> (<em>2019 — 2022</em>)<br><br>
+        
+                <strong>AP Coursework:</strong> Calculus BC, Physics Mechanics, Physics E&M, Macroeconomics, Microeconomics, Computer Science A, US History, US Government & Politics, French<br>
+              </p>
+        
+            </li>
+        
+          </ol>
+        
+        </section>
+          
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+        
+            <h3 class="h3">Professional Experience</h3>
+          </div>
+        
+          <ol class="timeline-list">
+        
+            <li class="timeline-item">
+        
+              <h4 class="h4 timeline-item-title">
+                <strong>Production Software Developer Intern</strong>&nbsp;&nbsp;—&nbsp;&nbsp;<strong>Northfield Information Services</strong>
+              </h4>
+        
+              <span><em>Boston, MA</em> | <em>May 2024 – Sep 2024</em></span>
+        
+              <p class="timeline-text">
+                ◆ Utilized <strong>Python</strong> to automate the conversion and migration of decades' worth of historical risk model data files into <strong>SQL</strong> databases.<br>
+                ◆ Conducted performance tests to determine the optimal storage structure, comparing <strong>SQLite, PostgreSQL,</strong> and <strong>MS SQL Server</strong> databases.<br>
+                ◆ Optimized SQL queries through Python libraries (<strong>PyODBC, PostgreSQL, SQLite3</strong>) to enhance data accessibility and automate analysis.<br>
+                ◆ Developed and <strong>Docker containerized</strong> a <strong>FastAPI</strong> web app to facilitate efficient database client queries and responses.<br>
+              </p>
+        
+            </li>
+        
+            <li class="timeline-item">
+        
+              <h4 class="h4 timeline-item-title">
+                <strong>Quant Analyst - Developer Intern</strong>&nbsp;&nbsp;—&nbsp;&nbsp;<strong>Northfield Information Services</strong>
+              </h4>
+        
+              <span><em>Boston, MA</em> | <em>May 2023 – Sep 2023</em></span>
+        
+              <p class="timeline-text">
+                ◆ Implemented a <strong>"Householding" algorithm</strong> using Python and Northfield’s Optimizer API to efficiently optimize the risk and return of conglomerate investment portfolio holdings.<br>
+                ◆ Utilized <strong>Python</strong> and <strong>SQL</strong> to identify time-series and cross-sectional trends in risk model data.<br>
+                ◆ Monitored shifts in security and risk factor volatility, identifying areas of concern for client portfolios.<br>
+                ◆ Designed and implemented a data structure in a credit rating estimation solution, enhancing reliability of risk analysis.<br>
+              </p>
+        
+            </li>
+        
+            <li class="timeline-item">
+        
+              <h4 class="h4 timeline-item-title">
+                <strong>Treasurer</strong>&nbsp;&nbsp;—&nbsp;&nbsp;<strong>McGill University Sailing Team</strong>
+              </h4>
+        
+              <span><em>Montreal, QC</em> | <em>Nov 2023 – Present</em></span>
+        
+              <p class="timeline-text">
+                ◆ Manage <strong>$85,000</strong> in assets, preparing account budgets and communicating financial status to McGill Athletics for audits and tax reporting in accordance with small business standards.<br>
+                ◆ Forecast expenses with <strong>96% accuracy</strong> by applying statistical methods to historic data, ensuring financial sustainability.<br>
+                ◆ Create comprehensive financial reports (<strong>cash flow statements, balance sheets,</strong> and <strong>expense tracking by event</strong>), enabling performance-to-cost analysis and enhancing the team’s financial strategy.<br>
+              </p>
+        
+            </li>
+        
+          </ol>
+        
+        </section>
+        
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My Skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Python</h5>
+                <data value="80">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">SQL</h5>
+                <data value="70">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Java</h5>
+                <data value="90">85%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">C / C++</h5>
+                <data value="50">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+        <!-- Animated download button -->
+        <div class="download-resume-wrapper">
+          <a href="assets/files/resume.pdf" target="_blank" class="form-btn download-resume-btn" download>
+            <ion-icon name="download-outline"></ion-icon>
+            <span>Download Resume</span>
+          </a>
+        </div>
+
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Computer Science</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>AI</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Data Science</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Computer Science</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>AI</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Data Science</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="computer science">
+              <a href="https://github.com/NickBelev/Computer_Systems/tree/main/Assignment%203" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="Fractals" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Fractals</h3>
+
+                <p class="project-category">Computer Science</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="ai">
+              <a href="https://github.com/NickBelev/Othello_AI/blob/main/Belev_Rashid_Final_Report.pdf" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="Othello" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Othello</h3>
+
+                <p class="project-category">AI</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="data science">
+              <a href="https://github.com/NickBelev/Breaking_Bad_Data/blob/main/Report.pdf" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="Breaking Bad Analysis" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Breaking Bad - Data Analysis</h3>
+
+                <p class="project-category">Data Science</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="ai">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="Sudoku Solver" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Sudoku Solver</h3>
+
+                <p class="project-category">AI</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="computer science">
+              <a href="https://github.com/NickBelev/OS_Projects" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="OS Emulator" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">OS Emulator</h3>
+
+                <p class="project-category">Computer Science</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="data science">
+              <a href="https://github.com/NickBelev/PhillipsCurve" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="Phillips Curve" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Phillips Curve</h3>
+
+                <p class="project-category">Data Science</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="data science">
+              <a href="https://github.com/NickBelev/Data_Science/tree/main/HW_7" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="Web Scraper" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Web Scraper</h3>
+
+                <p class="project-category">Data Science</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="ai">
+              <a href="https://github.com/NHS-CS-Club/recyclenet" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="Recycling Classifier" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Recycling Classifier</h3>
+
+                <p class="project-category">AI</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="computer science">
+              <a href="https://leetcode.com/u/XxSierra117xX/" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="LeetCode" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">LeetCode</h3>
+
+                <p class="project-category">Computer Science</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+      <!--
+        - #News
+      -->
+
+      <article class="news" data-page="news">
+
+        <header>
+          <h2 class="h2 article-title">News</h2>
+        </header>
+      
+        <section class="news-posts">
+      
+          <ul class="news-posts-list">
+      
+            <!-- Article 1 -->
+            <li class="news-post-item">
+              <a href="https://www.sciencenews.org/article/quantum-computer-error-correction" target="_blank">
+      
+                <figure class="news-banner-box">
+                  <img src="./assets/images/blog-1.jpg" alt="Quantum Chip" loading="lazy">
+                </figure>
+      
+                <div class="news-content">
+      
+                  <div class="news-meta">
+                    <p class="news-category">Quantum Computing</p>
+      
+                    <span class="dot"></span>
+      
+                    <time datetime="2024-09-10">Sep 10, 2024</time>
+                  </div>
+      
+                  <h3 class="h3 news-item-title">A quantum computer corrected its own errors, improving its calculations</h3>
+      
+                  <p class="news-text">
+                    It’s a step in the right direction for reliable quantum computing.
+                  </p>
+      
+                </div>
+      
+              </a>
+            </li>
+      
+            <!-- Article 2 -->
+            <li class="news-post-item">
+              <a href="https://www.businessinsider.com/15-most-promising-ai-powered-fintech-startups-according-top-vcs-2024-11" target="_blank">
+      
+                <figure class="news-banner-box">
+                  <img src="./assets/images/blog-2.jpg" alt="AI-powered Fintechs" loading="lazy">
+                </figure>
+      
+                <div class="news-content">
+      
+                  <div class="news-meta">
+                    <p class="news-category">Finance</p>
+      
+                    <span class="dot"></span>
+      
+                    <time datetime="2024-11-01">Nov 1, 2024</time>
+                  </div>
+      
+                  <h3 class="h3 news-item-title">15 AI-powered Fintech Startups VCs Love</h3>
+      
+                  <p class="news-text">
+                    Despite fintech funding lows, AI-powered fintech startups are standing out among VCs.
+                  </p>
+      
+                </div>
+      
+              </a>
+            </li>
+      
+            <!-- Article 3 -->
+            <li class="news-post-item">
+              <a href="https://www.wsj.com/tech/ai/the-secret-weapon-helping-businesses-get-results-from-ai-humans-f99a0907" target="_blank">
+      
+                <figure class="news-banner-box">
+                  <img src="./assets/images/blog-3.jpg" alt="Humans and AI in Business" loading="lazy">
+                </figure>
+      
+                <div class="news-content">
+      
+                  <div class="news-meta">
+                    <p class="news-category">AI</p>
+      
+                    <span class="dot"></span>
+      
+                    <time datetime="2024-10-15">Oct 15, 2024</time>
+                  </div>
+      
+                  <h3 class="h3 news-item-title">The Secret to AI Success: Humans</h3>
+      
+                  <p class="news-text">
+                    Businesses rely on humans to refine AI tools and make them truly effective.
+                  </p>
+      
+                </div>
+      
+              </a>
+            </li>
+      
+            <!-- Article 4 -->
+            <li class="news-post-item">
+              <a href="https://www.sportsbusinessjournal.com/SB-Blogs/SBJ-Power-Up/2024/05/28.aspx" target="_blank">
+      
+                <figure class="news-banner-box">
+                  <img src="./assets/images/blog-4.jpg" alt="SailGP Data Insights" loading="lazy">
+                </figure>
+      
+                <div class="news-content">
+      
+                  <div class="news-meta">
+                    <p class="news-category">Sailing</p>
+      
+                    <span class="dot"></span>
+      
+                    <time datetime="2024-05-28">May 28, 2024</time>
+                  </div>
+      
+                  <h3 class="h3 news-item-title">SailGP's Cloud Data Insights</h3>
+      
+                  <p class="news-text">
+                    SailGP leverages the cloud to deliver cutting-edge data for competitors and fans.
+                  </p>
+      
+                </div>
+      
+              </a>
+            </li>
+      
+            <!-- Article 5 -->
+            <li class="news-post-item">
+              <a href="https://www.svgeurope.org/blog/headlines/sailgp-season-5-ai-cameras-to-get-viewers-closer-to-the-action/" target="_blank">
+      
+                <figure class="news-banner-box">
+                  <img src="./assets/images/blog-5.jpg" alt="AI Cameras in SailGP" loading="lazy">
+                </figure>
+      
+                <div class="news-content">
+      
+                  <div class="news-meta">
+                    <p class="news-category">Sailing</p>
+      
+                    <span class="dot"></span>
+      
+                    <time datetime="2025-03-10">Mar 10, 2025</time>
+                  </div>
+      
+                  <h3 class="h3 news-item-title">AI Cameras in SailGP Season 5</h3>
+      
+                  <p class="news-text">
+                    SailGP's Season 5 uses AI cameras to provide fans with closer action on the water.
+                  </p>
+      
+                </div>
+      
+              </a>
+            </li>
+      
+            <!-- Article 6 -->
+            <li class="news-post-item">
+              <a href="https://www.cfo.com/news/finance-leaders-are-using-generative-ai-tools-artificial-intelligence/735283/" target="_blank">
+      
+                <figure class="news-banner-box">
+                  <img src="./assets/images/blog-6.jpg" alt="Generative AI in Finance" loading="lazy">
+                </figure>
+      
+                <div class="news-content">
+      
+                  <div class="news-meta">
+                    <p class="news-category">Finance</p>
+      
+                    <span class="dot"></span>
+      
+                    <time datetime="2024-10-20">Oct 20, 2024</time>
+                  </div>
+      
+                  <h3 class="h3 news-item-title">Generative AI in Finance: What's Next?</h3>
+      
+                  <p class="news-text">
+                    Learn how finance leaders are using generative AI tools to drive better business decisions.
+                  </p>
+      
+                </div>
+      
+              </a>
+            </li>
+      
+          </ul>
+      
+        </section>
+      
+      </article>
+      
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Get in Touch</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d294663.1536795803!2d-71.1914212415194!3d42.31426405446732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37a1b35a1df51%3A0xe802c2e11e2d68b7!2sBoston%2C%20MA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" id="fname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" id="e-mail" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" id="mssg" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn download-resume-btn" type="button" onclick="sendMail()">
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+            
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
