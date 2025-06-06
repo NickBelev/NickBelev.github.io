@@ -263,25 +263,3 @@ function sendMail() {
       alert("Failed to send message. Please try again.");
     });
 }
-
-const toolsList = document.querySelector(".programming_tools-list");
-
-let scrollAmount = 0;
-let scrollDirection = 1; // 1 means right, -1 means left
-const scrollStep = 1; // Pixels per interval
-const maxScroll = toolsList.scrollWidth - toolsList.clientWidth;
-
-function autoScroll() {
-  scrollAmount += scrollStep * scrollDirection;
-
-  if (scrollAmount >= maxScroll || scrollAmount <= 0) {
-    scrollDirection *= -1; // Change direction at ends
-  }
-
-  toolsList.scrollLeft = scrollAmount;
-}
-
-setInterval(autoScroll, 15); // Adjust interval for speed
-
-
-
