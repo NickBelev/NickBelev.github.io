@@ -144,20 +144,18 @@ body { background: var(--smoky-black); }
   #EDITS
 \*-----------------------------------*/
 
-@media (max-width: 768px) {
-  .has-scrollbar::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-  }
+.has-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
 
-  .has-scrollbar::-webkit-scrollbar-track {
-    background: var(--onyx);
-  }
+.has-scrollbar::-webkit-scrollbar-track {
+  background: var(--onyx);
+}
 
-  .has-scrollbar::-webkit-scrollbar-thumb {
-    background: var(--orange-yellow-crayola);
-    border-radius: 5px;
-  }
+.has-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--orange-yellow-crayola);
+  border-radius: 5px;
 }
 
 .avatar-image {
