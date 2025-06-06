@@ -561,23 +561,30 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   white-space: nowrap;
-  padding: 0 10px; /* optional padding for aesthetics */
+}
+
+#dynamic-title {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+#typed-text, .cursor {
+  display: inline;
 }
 
 .cursor {
-  display: inline-block;
   animation: blink 1s infinite;
-  margin-left: 4px;
+  margin-left: 2px;
+  font-weight: normal; /* Ensures cursor aligns vertically with text */
 }
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
-
-
 
 
 /*-----------------------------------*\
