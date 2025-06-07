@@ -171,6 +171,7 @@ document.querySelector('.avatar-image').addEventListener('click', function () {
 });
 
 
+// List of qualifiers to cycle through
 const titles = [
   "Software Engineer",
   "Data Scientist",
@@ -181,41 +182,16 @@ const titles = [
 ];
 
 let currentIndex = 0;
-let charIndex = 0;
-let typing = true;
+const titleElement = document.getElementById("dynamic-title");
 
-const typedTextElement = document.getElementById('typed-text');
-
-function typeText() {
-  const currentTitle = titles[currentIndex];
-
-  if (typing) {
-    if (charIndex < currentTitle.length) {
-      typedTextElement.textContent += currentTitle.charAt(charIndex);
-      charIndex++;
-      setTimeout(typeText, 100); // Typing speed (adjustable)
-    } else {
-      typing = false;
-      setTimeout(typeText, 1500); // Pause at end of word
-    }
-  } else {
-    if (charIndex > 0) {
-      typedTextElement.textContent = currentTitle.slice(0, charIndex - 1);
-      charIndex--;
-      setTimeout(typeText, 50); // Deleting speed (faster)
-    } else {
-      typing = true;
-      currentIndex = (currentIndex + 1) % titles.length;
-      setTimeout(typeText, 500); // Short pause before typing next word
-    }
-  }
+// Function to update the title
+function updateTitle() {
+  currentIndex = (currentIndex + 1) % titles.length; // Loop back to the start when reaching the end
+  titleElement.textContent = titles[currentIndex];
 }
 
-// Initial call to start typing
-document.addEventListener('DOMContentLoaded', () => {
-  typeText();
-});
-
+// Change the title every 1.5
+setInterval(updateTitle, 1500);
 
 function sendMail() {
   // Collect input values
@@ -263,3 +239,4 @@ function sendMail() {
       alert("Failed to send message. Please try again.");
     });
 }
+
