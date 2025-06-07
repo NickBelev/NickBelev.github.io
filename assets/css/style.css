@@ -144,18 +144,20 @@ body { background: var(--smoky-black); }
   #EDITS
 \*-----------------------------------*/
 
-.has-scrollbar::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
-}
+@media (max-width: 768px) {
+  .has-scrollbar::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
 
-.has-scrollbar::-webkit-scrollbar-track {
-  background: var(--onyx);
-}
+  .has-scrollbar::-webkit-scrollbar-track {
+    background: var(--onyx);
+  }
 
-.has-scrollbar::-webkit-scrollbar-thumb {
-  background: var(--orange-yellow-crayola);
-  border-radius: 5px;
+  .has-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--orange-yellow-crayola);
+    border-radius: 5px;
+  }
 }
 
 .avatar-image {
@@ -557,34 +559,8 @@ main {
 
 .social-item .social-link:hover { color: var(--light-gray); }
 
-.title-container {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-}
 
-#dynamic-title {
-  display: inline-flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
 
-#typed-text, .cursor {
-  display: inline;
-}
-
-.cursor {
-  animation: blink 1s infinite;
-  margin-left: 2px;
-  font-weight: normal; /* Ensures cursor aligns vertically with text */
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
 
 
 /*-----------------------------------*\
