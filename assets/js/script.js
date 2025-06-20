@@ -175,8 +175,8 @@ document.querySelector('.avatar-image').addEventListener('click', function () {
 const titles = [
   "Software Engineer",
   "Data Scientist",
-  "Quant Researcher",
-  "AI Enthusiast",
+  "Quant Analyst",
+  "AI / ML Expert",
   "Treasurer",
   "Sailor"
 ];
