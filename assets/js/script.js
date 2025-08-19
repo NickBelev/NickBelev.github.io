@@ -194,11 +194,62 @@ function updateTitle() {
 // Change the title every 1.5
 setInterval(updateTitle, 1500);
 
+// function sendMail() {
+//   // Collect input values
+//   const name = document.getElementById("fname").value.trim();
+//   const email = document.getElementById("e-mail").value.trim();
+//   const message = document.getElementById("mssg").value.trim();
+
+//   // Validation checks
+//   const emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+//   const errors = [];
+
+//   if (name.length < 2) {
+//     errors.push("Ensure name is at least 2 characters long.");
+//   }
+
+//   if (!emailRegex.test(email)) {
+//     errors.push("Ensure a valid email is used.");
+//   }
+
+//   if (message.length < 5) {
+//     errors.push("Message must be at least 5 characters.");
+//   }
+
+//   // Display errors if any
+//   if (errors.length > 0) {
+//     console.error("Validation Errors: ", errors);
+//     alert("Your message couldn't be sent due to these errors:\n" + errors.join("\n"));
+//     return; // Stop execution if validation fails
+//   }
+
+//   // If validation passes, prepare parameters
+//   const params = {
+//     name,
+//     email,
+//     message
+//   };
+
+//   // Send email using emailjs
+//   emailjs.send("service_4xjs1jr", "template_5m0iqcp", params)
+//     .then(() => {
+//       alert("Your message has been sent.");
+//     })
+//     .catch((error) => {
+//       console.error("Error sending email:", error);
+//       alert("Failed to send message. Please try again.");
+//     });
+// }
+
 function sendMail() {
   // Collect input values
-  const name = document.getElementById("fname").value.trim();
-  const email = document.getElementById("e-mail").value.trim();
-  const message = document.getElementById("mssg").value.trim();
+  const nameField = document.getElementById("fname");
+  const emailField = document.getElementById("e-mail");
+  const messageField = document.getElementById("mssg");
+
+  const name = nameField.value.trim();
+  const email = emailField.value.trim();
+  const message = messageField.value.trim();
 
   // Validation checks
   const emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -234,10 +285,14 @@ function sendMail() {
   emailjs.send("service_4xjs1jr", "template_5m0iqcp", params)
     .then(() => {
       alert("Your message has been sent.");
+      
+      // Clear fields after successful send
+      nameField.value = "";
+      emailField.value = "";
+      messageField.value = "";
     })
     .catch((error) => {
       console.error("Error sending email:", error);
       alert("Failed to send message. Please try again.");
     });
 }
-
