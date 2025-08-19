@@ -176,10 +176,11 @@ const titles = [
   "Software Engineer",
   "Data Scientist",
   "Quant Analyst",
-  "AI / ML Expert",
-  "Treasurer",
+  "AI & ML Dev",
+  "Fintech Builder",
   "Sailor"
 ];
+
 
 let currentIndex = 0;
 const titleElement = document.getElementById("dynamic-title");
