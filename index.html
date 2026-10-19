@@ -38,6 +38,11 @@
       --accent: #5eead4;
       --accent-dim: rgba(94, 234, 212, 0.12);
       --accent-line: rgba(94, 234, 212, 0.35);
+      --amber: #fbbf24;
+      --violet: #c4b5fd;
+      --mac-red: #ff5f57;
+      --mac-yellow: #febc2e;
+      --mac-green: #28c840;
 
       --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
       --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
@@ -119,8 +124,10 @@
       font-family: var(--mono); font-size: 12px; color: var(--text-3);
     }
     .lights { display: flex; gap: 7px; }
-    .lights i { width: 10px; height: 10px; border-radius: 50%; background: var(--line-2); transition: background .2s; }
-    .window:hover .lights i:first-child { background: var(--accent); }
+    .lights i { width: 11px; height: 11px; border-radius: 50%; }
+    .lights i:nth-child(1) { background: var(--mac-red); }
+    .lights i:nth-child(2) { background: var(--mac-yellow); }
+    .lights i:nth-child(3) { background: var(--mac-green); }
     .titlebar-title { flex: 1; text-align: center; margin-right: 44px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
     /* ---------- hero ---------- */
@@ -187,10 +194,11 @@
     .commit.is-current::before { border-color: var(--accent); background: var(--accent); box-shadow: 0 0 0 4px var(--accent-dim); }
     .commit-meta { font-family: var(--mono); font-size: 13px; color: var(--text-3); line-height: 1.8; }
     .commit-meta .when { color: var(--text); }
+    .commit-meta .where { color: var(--amber); }
     .ref { display: inline-block; margin-top: 6px; padding: 1px 8px; border-radius: 4px; font-size: 11px; color: var(--accent); border: 1px solid var(--accent-line); }
     .commit h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.3; }
     .commit h3 a { color: inherit; }
-    .commit .role { font-family: var(--mono); font-size: 13px; color: var(--text-2); margin-top: 4px; }
+    .commit .role { font-family: var(--mono); font-size: 13px; color: var(--amber); margin-top: 4px; }
     .commit .points { margin-top: 16px; display: grid; gap: 10px; }
     .commit .points li { position: relative; padding-left: 22px; color: var(--text-2); }
     .commit .points li::before { content: "+"; position: absolute; left: 0; font-family: var(--mono); color: var(--accent); }
@@ -231,7 +239,7 @@
     .kv dd { color: var(--text-2); }
     .code { margin: 0; padding: 20px 24px; font-family: var(--mono); font-size: 13px; line-height: 1.8; white-space: pre-wrap; color: var(--text); }
     .code .c { color: var(--text-3); }
-    .code .k { color: var(--accent); }
+    .code .k { color: var(--violet); }
     .code .p { color: var(--text-3); }
 
     /* contact */
@@ -298,7 +306,7 @@
 
   <header class="menubar">
     <div class="container menubar-inner">
-      <a href="#top" class="brand"><img src="./assets/images/favicon.svg" alt="" width="22" height="22"><span>belev</span></a>
+      <a href="#top" class="brand"><img src="./assets/images/favicon.svg" alt="Nicholas Belev" width="22" height="22"></a>
       <nav aria-label="Sections">
         <ul class="menu">
           <li><a href="#overview"><kbd>1</kbd>overview</a></li>
@@ -318,24 +326,24 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <p class="prompt"><span class="user">guest@belev</span>:~$ <span class="typed" data-type="whoami">whoami</span></p>
+          <p class="prompt"><span class="user">guest@nb</span>:~$ <span class="typed" data-type="whoami">whoami</span></p>
           <h1>Nicholas Belev<span>.</span></h1>
           <p class="identity">software engineer<span>/</span>quant<span>/</span>founder</p>
           <p class="hero-lede">I build software for finance: AI agents for portfolio and risk analytics at <strong>SS&amp;C Algorithmics</strong>, and private equity forecasting models at <strong>Aspequity</strong>, the startup I co-founded.</p>
           <div class="actions">
-            <a class="btn btn-primary" href="./assets/files/Nicholas_Belev_Resume.pdf" target="_blank" rel="noopener">résumé.pdf</a>
+            <a class="btn btn-primary" href="./assets/files/Nicholas_Belev_Resume.pdf" target="_blank" rel="noopener">resume.pdf</a>
             <a class="btn" href="#contact">get in touch ↓</a>
           </div>
         </div>
 
         <div class="window reveal">
-          <div class="titlebar"><span class="lights"><i></i><i></i><i></i></span><span class="titlebar-title">nick@belev</span></div>
+          <div class="titlebar"><span class="lights"><i></i><i></i><i></i></span><span class="titlebar-title">nick@nb</span></div>
           <div class="fetch">
             <figure class="fetch-photo">
               <img src="./assets/images/nicholas-belev.jpg" alt="Portrait of Nicholas Belev" width="136" height="136">
             </figure>
             <div>
-              <p class="fetch-head">nick@belev</p>
+              <p class="fetch-head">nick@nb</p>
               <p class="fetch-rule">----------</p>
               <dl>
                 <div><dt>now</dt><dd>SS&amp;C Algorithmics</dd></div>
@@ -390,7 +398,7 @@
           <li class="commit is-current reveal">
             <div class="commit-meta">
               <div class="when">Jul 2026 → now</div>
-              <div>Toronto, ON</div>
+              <div class="where">Toronto, ON</div>
               <span class="ref">current</span>
             </div>
             <div>
@@ -409,7 +417,7 @@
           <li class="commit is-current reveal">
             <div class="commit-meta">
               <div class="when">Sep 2025 → now</div>
-              <div>Boston, MA</div>
+              <div class="where">Boston, MA</div>
               <span class="ref">startup</span>
             </div>
             <div>
@@ -427,7 +435,7 @@
           <li class="commit reveal">
             <div class="commit-meta">
               <div class="when">Jun → Aug 2025</div>
-              <div>Boston, MA</div>
+              <div class="where">Boston, MA</div>
               <span class="ref">internship</span>
             </div>
             <div>
@@ -445,7 +453,7 @@
           <li class="commit reveal">
             <div class="commit-meta">
               <div class="when">May → Sep 2024</div>
-              <div>Boston, MA</div>
+              <div class="where">Boston, MA</div>
               <span class="ref">internship</span>
             </div>
             <div>
@@ -463,7 +471,7 @@
           <li class="commit reveal">
             <div class="commit-meta">
               <div class="when">Nov 2023 → Nov 2025</div>
-              <div>Montreal, QC</div>
+              <div class="where">Montreal, QC</div>
               <span class="ref">leadership</span>
             </div>
             <div>
@@ -508,7 +516,7 @@
               <h3>Custom ETF Portfolio</h3>
               <p class="project-gist">factor-based portfolio construction</p>
               <p class="project-desc">Led the team building a factor-aware equity portfolio. Analyzed 10+ years of returns with Fama–French factors and rolling OLS regressions, constraining factor exposures to keep idiosyncratic risk under 20%. Earned the highest overall project evaluation.</p>
-              <p class="project-foot">course project · no public repo</p>
+              <p class="project-foot">no public repo</p>
             </div>
           </article>
 
@@ -552,7 +560,7 @@
               <h3>Stock Evaluation Utility</h3>
               <p class="project-gist">fundamental valuation &amp; return forecasting</p>
               <p class="project-desc">Parsed financial statements and market data from Yahoo Finance, computed fundamental ratios, and fit a multivariable regression with autoregressive terms to capture momentum and reversals and flag over- or under-valued stocks.</p>
-              <p class="project-foot">personal project</p>
+              <p class="project-foot">no public repo</p>
             </div>
           </article>
         </div>
@@ -632,13 +640,13 @@
           </ul>
 
           <div class="window term reveal">
-            <div class="titlebar"><span class="lights"><i></i><i></i><i></i></span><span class="titlebar-title">guest@belev: ~ — zsh</span></div>
+            <div class="titlebar"><span class="lights"><i></i><i></i><i></i></span><span class="titlebar-title">guest@nb: ~ — zsh</span></div>
             <div class="term-out" data-term-out aria-live="polite">
               <p class="muted">Last login: <span data-lastlogin></span></p>
               <p>Type <span class="hl">help</span> to see commands.</p>
             </div>
             <form class="term-form" data-term-form autocomplete="off">
-              <label for="term-input">guest@belev ~ %</label>
+              <label for="term-input">guest@nb ~ %</label>
               <input id="term-input" data-term-input type="text" spellcheck="false" autocapitalize="off" aria-label="Terminal command">
             </form>
             <div class="chips" data-chips>
@@ -692,10 +700,15 @@
     if (typed && !reduce) {
       var word = typed.getAttribute('data-type'), i = 0;
       typed.textContent = '';
-      setTimeout(function step() {
+      var type = function () {
         typed.textContent = word.slice(0, ++i);
-        if (i < word.length) setTimeout(step, 90 + Math.random() * 60);
-      }, 500);
+        setTimeout(i < word.length ? type : erase, i < word.length ? 90 + Math.random() * 60 : 2600);
+      };
+      var erase = function () {
+        typed.textContent = word.slice(0, --i);
+        setTimeout(i > 0 ? erase : type, i > 0 ? 55 : 900);
+      };
+      setTimeout(type, 500);
     }
 
     var clock = document.querySelector('[data-clock]');
@@ -754,7 +767,7 @@
     var commands = {
       help: function () {
         [['whoami', 'who this is'], ['ls', 'list files'], ['cat <file>', 'print a file'], ['experience', 'jump to experience'],
-         ['projects', 'jump to projects'], ['resume', 'open the résumé PDF'], ['contact', 'ways to reach me'], ['clear', 'clear the screen']]
+         ['projects', 'jump to projects'], ['resume', 'open the resume PDF'], ['contact', 'ways to reach me'], ['clear', 'clear the screen']]
           .forEach(function (c) { line([{ text: (c[0] + '             ').slice(0, 13), cls: 'hl' }, c[1]]); });
       },
       whoami: function () { line('Nicholas Belev: software engineer, quant, founder. Toronto.'); },
@@ -781,7 +794,7 @@
 
     function run(raw) {
       var cmd = raw.trim();
-      line([{ text: 'guest@belev ~ % ', cls: 'hl' }, cmd]);
+      line([{ text: 'guest@nb ~ % ', cls: 'hl' }, cmd]);
       if (cmd) {
         history.push(cmd); hIdx = history.length;
         var parts = cmd.split(/\s+/), name = parts[0].toLowerCase(), arg = parts.slice(1).join(' ');
