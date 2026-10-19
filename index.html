@@ -300,10 +300,109 @@
       .kv div { grid-template-columns: 1fr; gap: 2px; }
       .term { height: 320px; }
     }
+    /* ---------- boot screen ---------- */
+    .boot {
+      position: fixed; inset: 0; z-index: 1000;
+      background: #050607;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--mono); font-size: 13px; color: var(--text-2);
+      overflow: hidden;
+      transition: opacity .35s ease;
+    }
+    .boot::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background: repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 3px);
+    }
+    .boot::after {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,.55) 100%);
+    }
+    .boot-inner { position: relative; width: min(560px, calc(100% - 40px)); }
+    .boot-log { min-height: 168px; line-height: 1.75; white-space: pre; overflow: hidden; }
+    .boot-log p { opacity: 0; transform: translateY(4px); animation: bootline .18s ease forwards; }
+    .boot-log .t { color: var(--text-3); }
+    .boot-log .ok { color: var(--accent); }
+    @keyframes bootline { to { opacity: 1; transform: none; } }
+    .boot-brand { display: flex; align-items: center; gap: 14px; margin-top: 22px; opacity: 0; transition: opacity .25s ease; }
+    .boot-brand.on { opacity: 1; }
+    .boot-brand img { width: 34px; height: 34px; border-radius: 8px; box-shadow: 0 0 24px rgba(94,234,212,.35); }
+    .boot-brand b { color: var(--text); font-weight: 700; font-size: 15px; }
+    .boot-brand span { color: var(--text-3); }
+    .boot-bar { margin-top: 16px; height: 2px; background: var(--line); border-radius: 2px; overflow: hidden; }
+    .boot-bar i { display: block; height: 100%; width: 0; background: var(--accent); box-shadow: 0 0 12px var(--accent); transition: width .55s cubic-bezier(.4,0,.2,1); }
+    .boot-skip { position: absolute; bottom: 22px; left: 0; right: 0; text-align: center; font-size: 11px; color: var(--text-3); letter-spacing: .04em; }
+    .boot.off { animation: crt .5s cubic-bezier(.6,0,.3,1) forwards; }
+    @keyframes crt {
+      0%   { opacity: 1; transform: scale(1, 1); filter: brightness(1); }
+      55%  { opacity: 1; transform: scale(1, .004); filter: brightness(3); }
+      100% { opacity: 0; transform: scale(0, .004); filter: brightness(5); }
+    }
+    @media (max-width: 640px) { .boot { font-size: 11px; } .boot-log { min-height: 150px; } }
   </style>
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
+  <script>
+  (function () {
+    var seen = false;
+    try { seen = sessionStorage.getItem('nb-booted') === '1'; } catch (e) {}
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (seen || reduce) return;
+    try { sessionStorage.setItem('nb-booted', '1'); } catch (e) {}
+
+    var narrow = window.innerWidth < 640;
+    var lines = narrow ? [
+      ['nb-os 26.10 -- booting', ''],
+      ['cpu0: java py c++ r', 'ok'],
+      ['mount /experience', 'ok'],
+      ['quant: garch evt var', 'ok'],
+      ['aria-agent.service', 'ok'],
+      ['aspequity engine', 'ok'],
+      ['net: toronto, on', 'up']
+    ] : [
+      ['nb-os 26.10 (guest@nb) -- booting', ''],
+      ['cpu0: java python c++ r sql', 'ok'],
+      ['mounting /experience /projects /education', 'ok'],
+      ['loading quant modules: garch evt var-es', 'ok'],
+      ['starting aria-agent.service', 'ok'],
+      ['attaching aspequity forecast engine', 'ok'],
+      ['net: toronto, on', 'up']
+    ];
+    var el = document.createElement('div');
+    el.className = 'boot'; el.setAttribute('aria-hidden', 'true');
+    el.innerHTML = '<div class="boot-inner"><div class="boot-log"></div>' +
+      '<div class="boot-brand"><img src="./assets/images/favicon.svg" alt=""><div><b>Nick Belev</b><br><span>software engineer / quant / founder</span></div></div>' +
+      '<div class="boot-bar"><i></i></div></div><div class="boot-skip">press any key to skip</div>';
+    document.body.appendChild(el);
+    document.documentElement.style.overflow = 'hidden';
+
+    var log = el.querySelector('.boot-log'), brand = el.querySelector('.boot-brand'), bar = el.querySelector('.boot-bar i');
+    if (narrow || ('ontouchstart' in window)) el.querySelector('.boot-skip').textContent = 'tap to skip';
+    var t0 = performance.now(), timers = [], done = false;
+    function stamp() { var s = ((performance.now() - t0) / 1000).toFixed(3); return '[' + ('     ' + s).slice(-8) + '] '; }
+    function finish() {
+      if (done) return; done = true;
+      timers.forEach(clearTimeout);
+      el.classList.add('off');
+      setTimeout(function () { el.remove(); document.documentElement.style.overflow = ''; }, 520);
+      window.removeEventListener('keydown', finish); el.removeEventListener('click', finish);
+    }
+    lines.forEach(function (l, i) {
+      timers.push(setTimeout(function () {
+        var p = document.createElement('p');
+        var t = document.createElement('span'); t.className = 't'; t.textContent = stamp();
+        p.appendChild(t); p.appendChild(document.createTextNode(l[0]));
+        if (l[1]) { var pad = Math.max(2, (narrow ? 24 : 46) - l[0].length); p.appendChild(document.createTextNode(' ' + '.'.repeat(pad) + ' ')); var o = document.createElement('span'); o.className = 'ok'; o.textContent = '[ ' + l[1] + ' ]'; p.appendChild(o); }
+        log.appendChild(p);
+      }, 120 + i * 105));
+    });
+    var after = 120 + lines.length * 105;
+    timers.push(setTimeout(function () { brand.classList.add('on'); bar.style.width = '100%'; }, after + 80));
+    timers.push(setTimeout(finish, after + 900));
+    window.addEventListener('keydown', finish);
+    el.addEventListener('click', finish);
+  })();
+  </script>
 
   <header class="menubar">
     <div class="container menubar-inner">
