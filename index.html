@@ -1,1279 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nicholas Belev</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nicholas Belev — Software Engineer</title>
+  <meta name="description" content="Nicholas Belev is a software engineer building AI and data systems for financial risk. Associate Software Engineer at SS&C Algorithmics and Co-Founder & CTO of Aspequity. McGill B.Sc. Computer Science & AI.">
+  <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://nickbelev.github.io/">
 
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/n.png" type="image/x-icon"> 
-  
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Nicholas Belev — Software Engineer">
+  <meta property="og:description" content="Building AI and data systems for financial risk.">
+  <meta property="og:url" content="https://nickbelev.github.io/">
+  <meta property="og:image" content="https://nickbelev.github.io/assets/images/nicholas-belev.jpg">
+  <meta name="twitter:card" content="summary">
 
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/images/nicholas-belev.jpg">
 
-  <!--
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!-- EmailJS Setup -->
-  <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-  </script>
-  <script type="text/javascript">
-    (function() {
-      emailjs.init("G0RwnMVfhY_HLkWoI");
-    })();
-  </script>
-
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
-
 <body>
 
-  <!--
-    - #MAIN
-  -->
-
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Nicholas Belev" width="80" class="rounded-glow avatar-image">
-        </figure>        
-
-        <div class="info-content">
-          <h1 class="name" title="Nicholas Belev">Nicholas Belev</h1>
-          <div class="title-container">
-            <p id="dynamic-title" class="title">Software Engineer</p>
-          </div>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Contacts Menu</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:nicholas.belev@gmail.com" class="contact-link">nicholas.belev@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+16178936652" class="contact-link">+1 (617) 893-6652</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Graduation</p>
-
-              <time datetime="1982-06-23">May, 2026</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Toronto, ON, Canada</address>
-            </div>
-
-          </li>
-
+  <header class="nav" data-nav>
+    <div class="nav-inner">
+      <a href="#top" class="nav-brand">Nicholas Belev</a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/nicholas-belev/" target="_blank" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://github.com/NickBelev" target="_blank" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://www.instagram.com/mcgillsailing/?hl=en" target="_blank" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>News</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-
       </nav>
-
-      
-      <!--
-        - #ABOUT
-      -->
-      
-      <article class="about active" data-page="about">
-      
-        <header>
-          <h2 class="h2 article-title">About Me</h2>
-        </header>
-      
-        <section class="about-text">
-          <p>
-            <span class="intro">Hello, I'm Nick.</span>
-            <br><br>
-            I recently graduated from <strong>McGill University</strong> with a degree in <strong>Computer Science & Artificial Intelligence</strong> and minors in <strong>Mathematics</strong> and <strong>Finance</strong> (GPA: 3.91/4.00). My academic and professional focus centers on building reliable, data-driven systems for financial institutions.
-            <br><br>
-            I’ve gained hands-on experience across <strong>quantitative finance, risk analytics, and backend engineering</strong> through roles at <strong>Santander Bank</strong>, <strong>Northfield Information Services</strong>, and as Co-Founder & CTO of <strong>Aspequity</strong>, a startup building forecasting software for private equity cash flows and valuations. My work has ranged from leading an AI audit for enterprise models and remediating governance gaps, to developing portfolio optimization analytics, building large-scale private markets data pipelines, and deploying production-grade risk infrastructure supporting institutional investment workflows.
-            <br><br>
-            I’m particularly drawn to problems where <strong>software engineering, data quality, and financial modeling intersect</strong>—building systems that must be performant, auditable, and resilient in real-world financial environments.
-            <br><br>
-            Outside of internships and coursework, I’ve worked extensively on quantitative research and machine learning projects involving portfolio construction, factor modeling, volatility forecasting, NLP, and algorithmic game-playing systems. I enjoy building systems that combine statistical rigor with practical engineering constraints.
-            <br><br>
-            In parallel, I served two terms as <strong>Director of Finance</strong> for the McGill University Sailing Team, where I managed six-figure budgets, built forecasting models for capital planning, and supported audits and reporting. The role strengthened my ability to operate with ownership, precision, and accountability.
-            <br><br>
-            I’m motivated by roles that blend <strong>engineering rigor</strong> with <strong>financial impact</strong>, and I’m committed to continuous learning in high-stakes, collaborative environments.
-          </p>
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-        
-          <h3 class="h3 service-title">My Focus</h3>
-        
-          <ul class="service-list">
-        
-            <li class="service-item">
-              <div class="service-icon-box">
-                <img src="./assets/images/coding.png" alt="coding icon" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Software Engineering</h4>
-                <p class="service-item-text">
-                  Building production-grade software systems in Python and C++, with experience spanning APIs, backend infrastructure, data pipelines, and performance-focused financial applications.
-                </p>
-              </div>
-            </li>
-        
-            <li class="service-item">
-              <div class="service-icon-box">
-                <img src="./assets/images/database.png" alt="database icon" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Data Engineering & Analytics</h4>
-                <p class="service-item-text">
-                  Developing analytics infrastructure and decision-support tools using Python, SQL, and PostgreSQL. Experience includes portfolio risk analysis, private markets data pipelines, and quantitative reporting systems.
-                </p>
-              </div>
-            </li>
-        
-            <li class="service-item">
-              <div class="service-icon-box">
-                <img src="./assets/images/project-management.png" alt="project management icon" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Leadership & Ownership</h4>
-                <p class="service-item-text">
-                  Experience leading technical and operational initiatives across startups, finance teams, and research projects, with a focus on ownership, execution, and long-term system reliability.
-                </p>
-              </div>
-            </li>
-        
-            <li class="service-item">
-              <div class="service-icon-box">
-                <img src="./assets/images/finance.png" alt="finance icon" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Quantitative Finance</h4>
-                <p class="service-item-text">
-                  Applied experience in portfolio construction, factor modeling, volatility forecasting, and private market analytics, translating financial models into robust production-ready systems.
-                </p>
-              </div>
-            </li>
-        
-          </ul>
-        
-        </section>
-
-
-        <!-- 
-        Programming Tools 
-        -->
-        <section class="programming_tools">
-          
-          <h3 class="h3 programming_tools-title">Technical Toolkit</h3>
-        
-          <ul class="programming_tools-list has-scrollbar">
-        
-            <!-- Python -->
-            <li class="programming_tools-item">
-              <div class="content-card" data-programming_tools-item>
-                <figure class="programming_tools-avatar-box">
-                  <img src="./assets/images/python-logo.png" alt="Python" width="60" data-programming_tools-avatar>
-                </figure>
-                <h4 class="h4 programming_tools-item-title" data-programming_tools-title>Python</h4>
-                <div class="programming_tools-text" data-programming_tools-text>
-                  <p>
-                    Primary language for data science, machine learning, and backend development. 
-                    Experienced with <strong>pandas, NumPy, scikit-learn, NLTK, FastAPI</strong>, and automation pipelines for analytics and finance.
-                  </p>
-                </div>
-              </div>
-            </li>
-        
-            <!-- SQL & Databases -->
-            <li class="programming_tools-item">
-              <div class="content-card" data-programming_tools-item>
-                <figure class="programming_tools-avatar-box">
-                  <img src="./assets/images/sql-logo.png" alt="SQL & Databases" width="60" data-programming_tools-avatar>
-                </figure>
-                <h4 class="h4 programming_tools-item-title" data-programming_tools-title>SQL & Databases</h4>
-                <div class="programming_tools-text" data-programming_tools-text>
-                  <p>
-                    Experienced in <strong>PostgreSQL, MS SQL Server, Oracle SQL, SQLite</strong>. 
-                    Built pipelines to optimize queries on multi-terabyte datasets. 
-                    Skilled at integrating SQL with Python APIs for automation and data-driven workflows.
-                  </p>
-                </div>
-              </div>
-            </li>
-        
-            <!-- Docker -->
-            <li class="programming_tools-item">
-              <div class="content-card" data-programming_tools-item>
-                <figure class="programming_tools-avatar-box">
-                  <img src="./assets/images/docker-logo.png" alt="Docker" width="60" data-programming_tools-avatar>
-                </figure>
-                <h4 class="h4 programming_tools-item-title" data-programming_tools-title>Docker</h4>
-                <div class="programming_tools-text" data-programming_tools-text>
-                  <p>
-                    Containerized financial risk-model services and analytics pipelines for 
-                    secure deployment. Deployed FastAPI apps with sub-100ms latency.
-                  </p>
-                </div>
-              </div>
-            </li>
-        
-            <!-- Java -->
-            <li class="programming_tools-item">
-              <div class="content-card" data-programming_tools-item>
-                <figure class="programming_tools-avatar-box">
-                  <img src="./assets/images/java-logo.png" alt="Java" width="60" data-programming_tools-avatar>
-                </figure>
-                <h4 class="h4 programming_tools-item-title" data-programming_tools-title>Java</h4>
-                <div class="programming_tools-text" data-programming_tools-text>
-                  <p>
-                    Experienced in object-oriented design and algorithms. Applied Java 
-                    to projects involving graph theory, competitive programming, and backend services.
-                  </p>
-                </div>
-              </div>
-            </li>
-        
-            <!-- C / C++ -->
-            <li class="programming_tools-item">
-              <div class="content-card" data-programming_tools-item>
-                <figure class="programming_tools-avatar-box">
-                  <img src="./assets/images/c-logo.png" alt="C / C++" width="60" data-programming_tools-avatar>
-                </figure>
-                <h4 class="h4 programming_tools-item-title" data-programming_tools-title>C / C++</h4>
-                <div class="programming_tools-text" data-programming_tools-text>
-                  <p>
-                    Proficient with systems-level programming: OS, filesystems, and 
-                    memory management. Built C++ data structures powering credit rating estimation.
-                  </p>
-                </div>
-              </div>
-            </li>
-        
-            <!-- OCaml -->
-            <li class="programming_tools-item">
-              <div class="content-card" data-programming_tools-item>
-                <figure class="programming_tools-avatar-box">
-                  <img src="./assets/images/ocaml-logo.png" alt="OCaml" width="60" data-programming_tools-avatar>
-                </figure>
-                <h4 class="h4 programming_tools-item-title" data-programming_tools-title>OCaml</h4>
-                <div class="programming_tools-text" data-programming_tools-text>
-                  <p>
-                    Background in functional programming. Built interpreters and recursive 
-                    systems applying lambda-calculus and continuations.
-                  </p>
-                </div>
-              </div>
-            </li>
-        
-            <!-- Linux / Unix -->
-            <li class="programming_tools-item">
-              <div class="content-card" data-programming_tools-item>
-                <figure class="programming_tools-avatar-box">
-                  <img src="./assets/images/linux-logo.png" alt="Linux / Unix" width="60" data-programming_tools-avatar>
-                </figure>
-                <h4 class="h4 programming_tools-item-title" data-programming_tools-title>Linux / Unix</h4>
-                <div class="programming_tools-text" data-programming_tools-text>
-                  <p>
-                    Daily driver for development. Skilled in shell scripting, environment 
-                    configuration, and VM setup for efficient workflows.
-                  </p>
-                </div>
-              </div>
-            </li>
-        
-            <!-- Git / GitHub -->
-            <li class="programming_tools-item">
-              <div class="content-card" data-programming_tools-item>
-                <figure class="programming_tools-avatar-box">
-                  <img src="./assets/images/git-logo.png" alt="Git / GitHub" width="60" data-programming_tools-avatar>
-                </figure>
-                <h4 class="h4 programming_tools-item-title" data-programming_tools-title>Git / GitHub</h4>
-                <div class="programming_tools-text" data-programming_tools-text>
-                  <p>
-                    Version control for all major projects. Proficient with branching, 
-                    pull requests, and collaborative workflows in both academic and corporate environments.
-                  </p>
-                </div>
-              </div>
-            </li>
-        
-            <!-- Solidity -->
-            <li class="programming_tools-item">
-              <div class="content-card" data-programming_tools-item>
-                <figure class="programming_tools-avatar-box">
-                  <img src="./assets/images/solidity-logo.png" alt="Solidity" width="60" data-programming_tools-avatar>
-                </figure>
-                <h4 class="h4 programming_tools-item-title" data-programming_tools-title>Solidity</h4>
-                <div class="programming_tools-text" data-programming_tools-text>
-                  <p>
-                    Knowledge of Ethereum smart contracts and decentralized applications. 
-                    Created a custom Ethereum-backed crypto coin with Solidity.
-                  </p>
-                </div>
-              </div>
-            </li>
-        
-            <!-- Power BI -->
-            <li class="programming_tools-item">
-              <div class="content-card" data-programming_tools-item>
-                <figure class="programming_tools-avatar-box">
-                  <img src="./assets/images/powerbi-logo.png" alt="Power BI" width="60" data-programming_tools-avatar>
-                </figure>
-                <h4 class="h4 programming_tools-item-title" data-programming_tools-title>Power BI</h4>
-                <div class="programming_tools-text" data-programming_tools-text>
-                  <p>
-                    Built and published interactive dashboards backed by SQL and DAX 
-                    to track workloads and visualize project progress, delivering actionable insights.
-                  </p>
-                </div>
-              </div>
-            </li>
-        
-          </ul>
-        
-        </section>
-
-
-
-
-        <!--
-          - programming_tools modal
-        -->
-        <div class="modal-container" data-modal-container>
-        
-          <div class="overlay" data-overlay></div>
-        
-          <section class="programming_tools-modal">
-        
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-        
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/python-logo.png" alt="Python" width="80" data-modal-img>
-              </figure>
-<!--               <img src="./assets/images/icon-quote.png" alt="quote icon" class="quote-icon"> -->
-            </div>
-        
-            <div class="modal-content">
-              <h4 class="h3 modal-title" data-modal-title>Python</h4>
-<!--               <time datetime="2021-06-14">December, 2024</time> -->
-              <div data-modal-text>
-                <p>
-                  Expertise in Python for data analysis, machine learning, and automation. 
-                  Experienced with libraries such as Pandas, NumPy, and frameworks like FastAPI.
-                </p>
-              </div>
-            </div>
-        
-          </section>
-        
-        </div>
-
-        <!--
-          - clients
-        -->
-
-        <section class="clients">
-
-          <h3 class="h3 clients-title">Worked With</h3>
-
-          <ul class="clients-list has-scrollbar">
-            
-            <li class="clients-item">
-              <a href="https://www.santanderbank.com/" target="_blank">
-                <img src="./assets/images/logo-2-color.png" alt="Santander logo">
-              </a>
-            </li>
-            
-            <li class="clients-item">
-              <a href="https://www.northinfo.com/" target="_blank">
-                <img src="./assets/images/logo-1-color.png" alt="Northfield logo">
-              </a>
-            </li>
-            
-            <li class="clients-item">
-              <a href="https://aspequity.com/" target="_blank">
-                <img src="./assets/images/aspequity.png" alt="Aspequity logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://www.mcgillsailing.com/" target="_blank">
-                <img src="./assets/images/logo-3-color.png" alt="McGill Sailing logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://bostonsailingcenter.com/" target="_blank">
-                <img src="./assets/images/logo-4-color.png" alt="Boston Sailing Center logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-      
-      <!--
-        - #RESUME
-      -->
-      
-      <article class="resume" data-page="resume">
-      
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-      
-        <!-- Education -->
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-            <h3 class="h3">Education</h3>
-          </div>
-        
-          <ol class="timeline-list">
-        
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">
-                <strong>McGill University</strong> — B.Sc. Computer Science & Artificial Intelligence
-              </h4>
-              <span><em>Montreal, QC.  Aug 2022 – May 2026</em></span>
-              <p class="timeline-text">
-                <strong>GPA:</strong> 3.91 / 4.00<br>
-                <strong>Minors:</strong> Mathematics, Finance<br>
-                <strong>Relevant Coursework:</strong> Machine Learning, Algorithm Design, Quantitative Risk Management, Portfolio Theory, Statistics
-              </p>
-            </li>
-        
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">
-                <strong>IE University</strong> — Exchange Semester, Computer Science & AI
-              </h4>
-              <span><em>Madrid, Spain.  Winter 2025</em></span>
-              <p class="timeline-text">
-                Advanced coursework in applied artificial intelligence: NLP, Computer Vision, Recommender Systems, Blockchain & Crypto, Robotics
-              </p>
-            </li>
-        
-          </ol>
-        </section>
-        
-        <!-- Experience -->
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="briefcase-outline"></ion-icon>
-            </div>
-            <h3 class="h3">Professional Experience</h3>
-          </div>
-        
-          <ol class="timeline-list">
-        
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">
-                <strong>Santander Bank</strong> — Data Analytics Intern
-              </h4>
-              <span><em>Boston, MA.  Jun – Aug 2025</em></span>
-              <p class="timeline-text">
-                • Led the firm’s first <strong>AI audit</strong> by designing adversarial prompt test suites and statistical performance metrics; automated API testing to evaluate model risk, prompt injection defenses, and PII handling<br>
-                • Identified weaknesses in <strong>LLM guardrails</strong> through quantitative analysis of adversarial testing results, informing remediation across prompt injection and harmful content controls<br>
-                • Built a <strong>Power BI dashboard</strong> backed by Oracle SQL and DAX to forecast audit workload and support resource allocation across a 150+ person department<br>
-                • Refactored an <strong>Anti-Money Laundering tool</strong> by optimizing TF–IDF vectorization and fuzzy matching pipelines, achieving a 3× runtime improvement
-              </p>
-            </li>
-        
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">
-                <strong>Aspequity</strong> — Chief Technology Officer & Co-Founder
-              </h4>
-              <span><em>Boston, MA.  Sep 2025 – Present</em></span>
-              <p class="timeline-text">
-                • Co-founded a private markets startup building forecasting software for <strong>private equity cash flows and valuations</strong>, serving paying institutional clients<br>
-                • Built data pipelines for private equity LP data, storing commitments, distributions, NAV, TVPI, and IRR metrics in PostgreSQL<br>
-                • Developed a proprietary <strong>C++ forecasting platform</strong> and secure cloud API for client portfolio analytics access
-              </p>
-            </li>
-        
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">
-                <strong>Northfield</strong> — Quantitative Analyst & Software Engineer
-              </h4>
-              <span><em>Boston, MA.  May – Sep 2024</em></span>
-              <p class="timeline-text">
-                • Developed <strong>portfolio construction and optimization analytics</strong> in Python supporting long/short equity strategies for a $65B AUM asset manager<br>
-                • Built SQL and Python pipelines for <strong>factor attribution, volatility monitoring, and portfolio performance analysis</strong><br>
-                • Migrated 16,000+ legacy factor model files into PostgreSQL and deployed a <strong>FastAPI service enabling sub-10 ms risk queries</strong> for portfolio managers
-              </p>
-            </li>
-        
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">
-                <strong>McGill University Sailing Team</strong> — Director of Finance
-              </h4>
-              <span><em>Montreal, QC.  Nov 2023 – Nov 2025</em></span>
-              <p class="timeline-text">
-                • Managed <strong>financial planning for a $100K annual budget</strong> and built quantitative allocation models to guide capital deployment decisions<br>
-                • Improved budget efficiency by <strong>1.5×</strong> through structured expense forecasting and scenario analysis<br>
-                • Led fundraising initiatives increasing team assets by <strong>$20K within one month</strong>
-              </p>
-            </li>
-        
-          </ol>
-        </section>
-            
-        <!-- Skills -->
-        <section class="skill">
-          <h3 class="h3 skills-title">Core Technologies</h3>
-          <ul class="skills-list content-card">
-            <li class="skills-item">
-              <div class="title-wrapper"><h5 class="h5">Python</h5><data value="90">90%</data></div>
-              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 90%;"></div></div>
-            </li>
-            <li class="skills-item">
-              <div class="title-wrapper"><h5 class="h5">SQL</h5><data value="80">80%</data></div>
-              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 80%;"></div></div>
-            </li>
-            <li class="skills-item">
-              <div class="title-wrapper"><h5 class="h5">Java</h5><data value="85">85%</data></div>
-              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 85%;"></div></div>
-            </li>
-            <li class="skills-item">
-              <div class="title-wrapper"><h5 class="h5">C / C++</h5><data value="70">70%</data></div>
-              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 70%;"></div></div>
-            </li>
-          </ul>
-        </section>
-      
-        <!-- Download Button -->
-        <div class="download-resume-wrapper">
-          <a href="assets/files/Nicholas_Belev_Resume.pdf" target="_blank" class="form-btn download-resume-btn" download>
-            <ion-icon name="download-outline"></ion-icon>
-            <span>Download Resume</span>
-          </a>
-        </div>
-      
-      </article>
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Computer Science</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>AI</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Data Science</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Computer Science</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>AI</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Data Science</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="ai">
-              <a href="https://github.com/NickBelev/GazeTracker/blob/main/Understanding%20Customer%20Attention%20to%20Magazine%20Covers%20through%20Eye%20Tracking.pdf" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/gaze.jpg" alt="Gaze Tracking" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Gaze Tracker</h3>
-
-                <p class="project-category">AI</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="ai">
-              <a href="https://github.com/NickBelev/HateSpeechDetector" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/hatespeech.jpg" alt="Hate Speech Detection" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Hate Speech Detection</h3>
-
-                <p class="project-category">AI</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="data science">
-              <a href="https://github.com/NickBelev/RecommendationEngines/tree/main" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/recsys.jpg" alt="Recommender Engines" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Recommender Engines</h3>
-
-                <p class="project-category">Data Science</p>
-
-              </a>
-            </li>
-            
-            <li class="project-item  active" data-filter-item data-category="computer science">
-              <a href="https://github.com/NickBelev/Computer_Systems/tree/main/Assignment%203" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="Fractals" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fractals</h3>
-
-                <p class="project-category">Computer Science</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="ai">
-              <a href="https://github.com/NickBelev/Othello_AI/blob/main/Belev_Rashid_Final_Report.pdf" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="Othello" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Othello</h3>
-
-                <p class="project-category">AI</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="data science">
-              <a href="https://github.com/NickBelev/Breaking_Bad_Data/blob/main/Report.pdf" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="Breaking Bad Analysis" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Breaking Bad - Data Analysis</h3>
-
-                <p class="project-category">Data Science</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="ai">
-              <a href="https://github.com/NickBelev/SudokuSolver" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="Sudoku Solver" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Sudoku Solver</h3>
-
-                <p class="project-category">AI</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="computer science">
-              <a href="https://github.com/NickBelev/OS_Projects" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="OS Emulator" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">OS Emulator</h3>
-
-                <p class="project-category">Computer Science</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="data science">
-              <a href="https://github.com/NickBelev/PhillipsCurve" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="Phillips Curve" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Phillips Curve</h3>
-
-                <p class="project-category">Data Science</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="data science">
-              <a href="https://github.com/NickBelev/Data_Science/tree/main/HW_7" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="Web Scraper" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Web Scraper</h3>
-
-                <p class="project-category">Data Science</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="ai">
-              <a href="https://github.com/NHS-CS-Club/recyclenet" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="Recycling Classifier" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Recycling Classifier</h3>
-
-                <p class="project-category">AI</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="computer science">
-              <a href="https://leetcode.com/u/XxSierra117xX/" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="LeetCode" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">LeetCode</h3>
-
-                <p class="project-category">Computer Science</p>
-
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="data science">
-              <a href="https://github.com/NickBelev/Quant_Risk_Management/blob/main/A4_Writeup.pdf" target="_blank">
-            
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-            
-                  <img src="./assets/images/var_forecasting.png" alt="Quant Risk Forecasting" loading="lazy">
-                </figure>
-            
-                <h3 class="project-title">Quant Risk Forecasting</h3>
-            
-                <p class="project-category">Data Science</p>
-            
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="ai">
-              <a href="https://github.com/NickBelev/COMP_551/blob/main/A3/Comp_551_Assignment_3_Group_26.pdf" target="_blank">
-            
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-            
-                  <img src="./assets/images/odd_one_out.png" alt="Odd-One-Out Classifier" loading="lazy">
-                </figure>
-            
-                <h3 class="project-title">Odd-One-Out Classifier</h3>
-            
-                <p class="project-category">AI</p>
-            
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="data science">
-              <a href="https://github.com/NickBelev/COMP_551/blob/main/A2/writeup.pdf" target="_blank">
-            
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-            
-                  <img src="./assets/images/spam_detection.png" alt="Spam Detection" loading="lazy">
-                </figure>
-            
-                <h3 class="project-title">Spam Detection</h3>
-            
-                <p class="project-category">Data Science</p>
-            
-              </a>
-            </li>
-            
-
-          </ul>
-
-        </section>
-
-      </article>
-
-      <!--
-        - #News
-      -->
-
-      <article class="news" data-page="news">
-      
-        <header>
-          <h2 class="h2 article-title">News</h2>
-        </header>
-      
-        <section class="news-posts">
-          <ul class="news-posts-list">
-      
-            <!-- Article 1: Algorithm Breakthrough -->
-            <li class="news-post-item">
-              <a href="https://medium.com/data-science-in-your-pocket/dijkstra-defeated-new-fastest-shortest-path-algorithm-explained-4075b000353a" target="_blank">
-      
-                <figure class="news-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Dijkstra Defeated" loading="lazy">
-                </figure>
-      
-                <div class="news-content">
-                  <div class="news-meta">
-                    <p class="news-category">Algorithms</p>
-                    <span class="dot"></span>
-                    <time datetime="2025-04-29">Apr 29, 2025</time>
-                  </div>
-      
-                  <h3 class="h3 news-item-title">Dijkstra Defeated: New Fastest Shortest Path Algorithm</h3>
-      
-                  <p class="news-text">
-                    A breakthrough algorithm shatters Dijkstra’s limits, accelerating shortest-path calculations for massive networks.
-                  </p>
-                </div>
-              </a>
-            </li>
-      
-            <!-- Article 2: Meta $100M Talent Race -->
-            <li class="news-post-item">
-              <a href="https://www.wired.com/story/sam-altman-meta-ai-talent-poaching-spree-leaked-messages/" target="_blank">
-      
-                <figure class="news-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Meta Signing Bonuses" loading="lazy">
-                </figure>
-      
-                <div class="news-content">
-                  <div class="news-meta">
-                    <p class="news-category">Tech & Talent</p>
-                    <span class="dot"></span>
-                    <time datetime="2025-06-18">Jun 18, 2025</time>
-                  </div>
-      
-                  <h3 class="h3 news-item-title">Sam Altman Slams Meta’s AI Talent-Poaching Spree: ‘Missionaries Will Beat Mercenaries’</h3>
-      
-                  <p class="news-text">
-                    In a leaked memo, Altman urged OpenAI staff to stay focused on building AGI, dismissing Meta’s hiring spree as short-sighted and culturally risky.
-                  </p>
-                </div>
-              </a>
-            </li>
-      
-            <!-- Article 3: Rigetti Fidelity Breakthrough -->
-            <li class="news-post-item">
-              <a href="https://ts2.tech/en/quantum-computings-weekend-bombshells-aug-3-4-2025-breakthroughs-big-bets-new-rules/" target="_blank">
-      
-                <figure class="news-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Rigetti Fidelity Milestone" loading="lazy">
-                </figure>
-      
-                <div class="news-content">
-                  <div class="news-meta">
-                    <p class="news-category">Quantum Hardware</p>
-                    <span class="dot"></span>
-                    <time datetime="2025-08-04">Aug 4, 2025</time>
-                  </div>
-      
-                  <h3 class="h3 news-item-title">Rigetti Achieves 99.5% Two-Qubit Gate Fidelity</h3>
-      
-                  <p class="news-text">
-                    Rigetti halves error rates with a modular 36-qubit chip—pushing quantum hardware closer to scalable, error-corrected systems.
-                  </p>
-                </div>
-              </a>
-            </li>
-
-            <!-- Article 4: Alzheimer’s AI Prize -->
-            <li class="news-post-item">
-              <a href="https://www.geekwire.com/2025/bill-gates-backed-ai-competition-offers-1m-to-accelerate-alzheimers-research/" target="_blank">
-            
-                <figure class="news-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="Alzheimer’s AI Prize" loading="lazy">
-                </figure>
-            
-                <div class="news-content">
-                  <div class="news-meta">
-                    <p class="news-category">AI & Biomedicine</p>
-                    <span class="dot"></span>
-                    <time datetime="2025-08-19">Aug 19, 2025</time>
-                  </div>
-            
-                  <h3 class="h3 news-item-title">Bill Gates-Backed AI Prize Launches to Accelerate Alzheimer’s Research</h3>
-            
-                  <p class="news-text">
-                    A $1M global challenge invites agentic AI systems to autonomously mine decades of Alzheimer’s data for novel treatment leads—and share winning tools via a public research platform.
-                  </p>
-                </div>
-              </a>
-            </li>
-
-            <!-- Article 5: AI & Emissions Impact -->
-            <li class="news-post-item">
-              <a href="https://www.scientificamerican.com/article/ai-and-data-centers-could-cut-more-climate-change-causing-emissions-than/" target="_blank">
-            
-                <figure class="news-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="AI Reducing Emissions" loading="lazy">
-                </figure>
-            
-                <div class="news-content">
-                  <div class="news-meta">
-                    <p class="news-category">AI & Sustainability</p>
-                    <span class="dot"></span>
-                    <time datetime="2025-06-23">Jun 23, 2025</time>
-                  </div>
-            
-                  <h3 class="h3 news-item-title">AI Could Be Harnessed to Cut More Emissions Than It Creates</h3>
-            
-                  <p class="news-text">
-                    Research suggests AI-driven systems and data-center optimization could clean the grid—potentially offsetting their own emissions by reducing climate-impacting output across sectors.  
-                  </p>
-                </div>
-              </a>
-            </li>
-
-            <!-- Article 6: Foundations of Generalist Robotics -->
-            <li class="news-post-item">
-              <a href="https://www.theverge.com/news/631743/nvidia-issac-groot-n1-robotics-foundation-model-available" target="_blank">
-            
-                <figure class="news-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Isaac GR00T N1 Foundation Model" loading="lazy">
-                </figure>
-            
-                <div class="news-content">
-                  <div class="news-meta">
-                    <p class="news-category">Robotics & AI</p>
-                    <span class="dot"></span>
-                    <time datetime="2025-03-19">Mar 19, 2025</time>
-                  </div>
-            
-                  <h3 class="h3 news-item-title">Nvidia Launches Isaac GR00T N1: The Open Foundation Model for Generalist Robots</h3>
-            
-                  <p class="news-text">
-                    Nvidia’s Isaac GR00T N1 model marries reflexive actions with deliberative reasoning—ushering in “generalist robotics.” Open-source, it promises adaptable humanoid behavior across unpredictable physical tasks.
-                  </p>
-                </div>
-              </a>
-            </li>
-      
-          </ul>
-        </section>
-      
-      </article>
-
-
-      
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Get in Touch</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.268795226724!2d-79.38964212405682!3d43.64257565311831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34d68a2284a3%3A0x34919d2a807a1e51!2s290%20Bremner%20Blvd%2C%20Toronto%2C%20ON%20M5V%203L9%2C%20Canada!5e0!3m2!1sen!2sus!4v1778096225401!5m2!1sen!2sus"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" id="fname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" id="e-mail" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" id="mssg" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn download-resume-btn" type="button" onclick="sendMail()">
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-            
-
-          </form>
-
-        </section>
-
-      </article>
-
+      <a href="./assets/files/Nicholas_Belev_Resume.pdf" class="btn btn-small" target="_blank" rel="noopener">Résumé</a>
     </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <img class="hero-photo reveal" src="./assets/images/nicholas-belev.jpg" alt="Portrait of Nicholas Belev" width="148" height="148">
+        <p class="eyebrow reveal">Associate Software Engineer at SS&amp;C Algorithmics</p>
+        <h1 class="hero-title reveal">Nicholas Belev</h1>
+        <p class="hero-lede reveal">I build AI and data systems for financial risk&nbsp;— from enterprise LLM assistants to private&nbsp;equity forecasting.</p>
+        <div class="hero-actions reveal">
+          <a href="./assets/files/Nicholas_Belev_Resume.pdf" class="btn" target="_blank" rel="noopener">View résumé</a>
+          <a href="#contact" class="link-arrow">Get in touch</a>
+        </div>
+        <p class="hero-meta reveal">
+          <span>Toronto, ON</span>
+          <span aria-hidden="true">·</span>
+          <a href="https://www.linkedin.com/in/nicholas-belev/" target="_blank" rel="noopener">LinkedIn</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://github.com/NickBelev" target="_blank" rel="noopener">GitHub</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section class="highlights" aria-label="Highlights">
+      <div class="container">
+        <ul class="stats">
+          <li class="stat reveal">
+            <span class="stat-value">3.92</span>
+            <span class="stat-label">GPA, McGill B.Sc. Computer Science &amp; AI</span>
+          </li>
+          <li class="stat reveal">
+            <span class="stat-value">$65B</span>
+            <span class="stat-label">AUM supported by portfolio analytics at Northfield</span>
+          </li>
+          <li class="stat reveal">
+            <span class="stat-value">&lt;10&nbsp;ms</span>
+            <span class="stat-label">Risk queries served by a FastAPI service I built</span>
+          </li>
+          <li class="stat reveal">
+            <span class="stat-value">Top 10</span>
+            <span class="stat-label">of 200 teams in an Othello AI agent competition</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container narrow">
+        <h2 class="section-title reveal">About</h2>
+        <div class="prose reveal">
+          <p>I'm a software engineer working where <strong>AI, data engineering, and quantitative finance</strong> meet. At SS&amp;C Algorithmics I build ARIA, an enterprise Java AI assistant for financial risk analysis. In parallel, I co-founded <strong>Aspequity</strong>, where I lead engineering on a C++ platform that forecasts private equity cash flows and valuations for institutional clients.</p>
+          <p>Before that, I led Santander's first LLM audit and built portfolio and risk analytics at Northfield. I graduated from McGill in 2026 with a B.Sc. in Computer Science &amp; Artificial Intelligence and minors in Mathematics and Finance. I like systems that need to be fast, auditable, and right.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title reveal">Experience</h2>
+
+        <ol class="timeline">
+          <li class="role reveal">
+            <div class="role-meta">
+              <span class="role-dates">Jul 2026 — Present</span>
+              <span class="role-place">Toronto, ON</span>
+            </div>
+            <div class="role-body">
+              <h3 class="role-company">SS&amp;C Algorithmics</h3>
+              <p class="role-title">Associate Software Engineer</p>
+              <ul class="role-points">
+                <li>Built AWS Lambda–based AI cost tracking and enforcement for ARIA, an enterprise Java AI assistant for financial risk analysis, enabling usage monitoring and client spending limits.</li>
+                <li>Extended ARIA for multi-tenant, multi-client deployment and improved its Portfolio Insights agent to analyze holdings, exposures, and risk statistics.</li>
+                <li>Implemented RAG-based persistent memory to retain client preferences, project context, and history across conversations and sessions.</li>
+              </ul>
+              <ul class="tags"><li>Java</li><li>Spring AI</li><li>AWS Lambda</li><li>RAG</li></ul>
+            </div>
+          </li>
+
+          <li class="role reveal">
+            <div class="role-meta">
+              <span class="role-dates">Sep 2025 — Present</span>
+              <span class="role-place">Boston, MA</span>
+            </div>
+            <div class="role-body">
+              <h3 class="role-company"><a href="https://aspequity.com/" target="_blank" rel="noopener">Aspequity</a></h3>
+              <p class="role-title">Co-Founder &amp; Chief Technology Officer</p>
+              <ul class="role-points">
+                <li>Co-founded a private equity forecasting software business serving paying institutional clients; own development of its C++ cash flow and valuation modeling platform.</li>
+                <li>Built a pipeline that turns private equity fund reports into structured historical data, feeding regression-based forecasts of contributions, distributions, and NAV.</li>
+                <li>Extended the Yale cash flow modeling framework with historical fund data and regression-based estimation; developed PostgreSQL infrastructure and secure client API access.</li>
+              </ul>
+              <ul class="tags"><li>C++</li><li>PostgreSQL</li><li>Regression modeling</li></ul>
+            </div>
+          </li>
+
+          <li class="role reveal">
+            <div class="role-meta">
+              <span class="role-dates">Jun — Aug 2025</span>
+              <span class="role-place">Boston, MA</span>
+            </div>
+            <div class="role-body">
+              <h3 class="role-company">Santander Bank</h3>
+              <p class="role-title">Data Analytics Intern</p>
+              <ul class="role-points">
+                <li>Led the firm's first LLM audit, designing adversarial prompts, automated API tests, and statistical metrics to assess model risk, prompt-injection defenses, and PII handling.</li>
+                <li>Built a Power BI dashboard on Oracle SQL and DAX to forecast audit workloads and guide staffing across a 150+ person department.</li>
+                <li>Refactored an anti-money-laundering text-matching tool by optimizing TF–IDF vectorization and fuzzy matching, delivering a 3× runtime improvement.</li>
+              </ul>
+              <ul class="tags"><li>LLM evaluation</li><li>Python</li><li>Oracle SQL</li><li>Power BI</li></ul>
+            </div>
+          </li>
+
+          <li class="role reveal">
+            <div class="role-meta">
+              <span class="role-dates">May — Sep 2024</span>
+              <span class="role-place">Boston, MA</span>
+            </div>
+            <div class="role-body">
+              <h3 class="role-company">Northfield</h3>
+              <p class="role-title">Quantitative Analyst &amp; Software Engineer</p>
+              <ul class="role-points">
+                <li>Developed Python portfolio construction and optimization analytics supporting long/short equity strategies for a $65B AUM asset manager.</li>
+                <li>Built SQL/Python pipelines for factor attribution, volatility monitoring, and portfolio performance analysis.</li>
+                <li>Migrated 16,000+ legacy factor model files to PostgreSQL and built a FastAPI service enabling sub-10&nbsp;ms risk queries for portfolio managers.</li>
+              </ul>
+              <ul class="tags"><li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>Factor models</li></ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Selected projects</h2>
+
+        <div class="cards">
+          <article class="card reveal">
+            <p class="card-kicker">AI · Oct — Dec 2024</p>
+            <h3 class="card-title">Othello AI Agent</h3>
+            <p class="card-text">A competitive game-playing agent using alpha–beta pruning, iterative deepening, and Zobrist hashing under 2&nbsp;s move and 500&nbsp;MB memory limits. Placed top 10 of 200 teams; won 100% of games against greedy agents and 99% against stochastic ones.</p>
+            <a class="link-arrow" href="https://github.com/NickBelev/Othello_AI" target="_blank" rel="noopener">View on GitHub</a>
+          </article>
+
+          <article class="card reveal">
+            <p class="card-kicker">Quant risk · Mar — Apr 2026</p>
+            <h3 class="card-title">Financial Risk Modeling &amp; VaR Forecasting</h3>
+            <p class="card-text">Modeled ETF returns with ARMA-GARCH(1,1) and Student-t innovations to capture volatility clustering and heavy tails. Forecast 95%/99% VaR and Expected Shortfall via historical simulation, EVT, and parametric methods, validated with rolling backtests.</p>
+            <a class="link-arrow" href="https://github.com/NickBelev/Quant_Risk_Management" target="_blank" rel="noopener">View on GitHub</a>
+          </article>
+
+          <article class="card reveal">
+            <p class="card-kicker">Portfolio construction · Sep — Dec 2025</p>
+            <h3 class="card-title">Custom ETF Portfolio</h3>
+            <p class="card-text">Led a six-person team to build a factor-aware equity portfolio, earning the highest overall project evaluation. Analyzed 10+ years of returns with Fama–French factors and rolling OLS, constraining exposures to keep idiosyncratic risk under 20%.</p>
+            <span class="card-note">Team lead</span>
+          </article>
+        </div>
+
+        <div class="more reveal">
+          <h3 class="more-title">More on GitHub</h3>
+          <ul class="more-list">
+            <li><a href="https://github.com/NickBelev/GazeTracker" target="_blank" rel="noopener"><span>Gaze Tracker</span><span class="more-cat">Computer vision</span></a></li>
+            <li><a href="https://github.com/NickBelev/HateSpeechDetector" target="_blank" rel="noopener"><span>Hate Speech Detection</span><span class="more-cat">NLP</span></a></li>
+            <li><a href="https://github.com/NickBelev/RecommendationEngines" target="_blank" rel="noopener"><span>Recommender Engines</span><span class="more-cat">Machine learning</span></a></li>
+            <li><a href="https://github.com/NickBelev/COMP_551" target="_blank" rel="noopener"><span>Applied Machine Learning</span><span class="more-cat">Classification</span></a></li>
+            <li><a href="https://github.com/NickBelev/OS_Projects" target="_blank" rel="noopener"><span>OS Emulator</span><span class="more-cat">Systems · C</span></a></li>
+            <li><a href="https://github.com/NickBelev" target="_blank" rel="noopener"><span>All repositories</span><span class="more-cat">github.com/NickBelev</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & skills -->
+    <section id="education" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title reveal">Education</h2>
+
+        <div class="edu reveal">
+          <div class="edu-head">
+            <div>
+              <h3 class="edu-school">McGill University</h3>
+              <p class="edu-degree">B.Sc. Computer Science &amp; Artificial Intelligence<br>Minors in Mathematics and Finance</p>
+            </div>
+            <div class="edu-side">
+              <span class="edu-gpa">3.92<small> / 4.00</small></span>
+              <span class="edu-date">Montreal · Graduated May 2026</span>
+            </div>
+          </div>
+          <p class="edu-detail"><span>Coursework</span> Machine Learning, Algorithms, Statistics, Quantitative Risk Management, Portfolio Theory</p>
+          <p class="edu-detail"><span>Exchange</span> IE University, Madrid — Winter 2025. NLP, computer vision, recommender systems.</p>
+          <p class="edu-detail"><span>Leadership</span> Director of Finance, McGill Sailing Team (2023–2025) — managed a $100K annual budget and led fundraising.</p>
+        </div>
+
+        <h2 class="section-title section-title-sub reveal">Skills</h2>
+        <div class="skills reveal">
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <ul class="tags"><li>Java</li><li>Python</li><li>C++</li><li>C</li><li>SQL</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3>Frameworks &amp; libraries</h3>
+            <ul class="tags"><li>Spring Boot</li><li>Spring AI</li><li>LangChain4j</li><li>FastAPI</li><li>Pandas</li><li>NumPy</li><li>scikit-learn</li></ul>
+          </div>
+          <div class="skill-group">
+            <h3>Cloud &amp; tools</h3>
+            <ul class="tags"><li>AWS Lambda</li><li>AWS EC2</li><li>PostgreSQL</li><li>Docker</li><li>Git</li><li>Linux</li><li>Power BI</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <div class="container narrow center">
+        <h2 class="contact-title reveal">Let's talk.</h2>
+        <p class="contact-lede reveal">Open to conversations about AI engineering, financial technology, and quantitative systems.</p>
+        <div class="hero-actions reveal">
+          <a href="mailto:nicholas.belev@gmail.com" class="btn">nicholas.belev@gmail.com</a>
+        </div>
+        <ul class="contact-links reveal">
+          <li><a href="https://www.linkedin.com/in/nicholas-belev/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/NickBelev" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="./assets/files/Nicholas_Belev_Resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a></li>
+        </ul>
+      </div>
+    </section>
 
   </main>
 
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span data-year>2026</span> Nicholas Belev</span>
+      <span>Toronto, Canada</span>
+    </div>
+  </footer>
 
-
-
-
-
-  <!--
-    - custom js link
-  -->
   <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
-
 </html>
