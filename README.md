@@ -4,12 +4,10 @@ Personal site of Nicholas Belev — software engineer building AI and data syste
 
 Live at **https://nickbelev.github.io**
 
-Plain HTML, CSS, and a few lines of JavaScript. No build step.
+A single self-contained `index.html` (inline CSS and JS). No build step.
 
 ```
 index.html
-assets/css/style.css
-assets/js/script.js
 assets/images/          portrait, favicon
 assets/files/           résumé (PDF)
 ```
