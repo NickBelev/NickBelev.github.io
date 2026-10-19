@@ -1,6 +1,6 @@
 # nickbelev.github.io
 
-Personal site of Nicholas Belev — software engineer building AI and data systems for financial risk.
+Personal site of Nick Belev: software engineer, quant, and founder.
 
 Live at **https://nickbelev.github.io**
 
