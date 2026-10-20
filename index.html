@@ -3,21 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nick Belev</title>
+  <title>Nicholas Belev</title>
   <meta name="description" content="Nicholas Belev builds software for finance: AI agents for risk analytics at SS&C Algorithmics and private equity forecasting models at Aspequity, the startup he co-founded.">
   <meta name="theme-color" content="#0a0b0d">
   <meta name="color-scheme" content="dark">
   <link rel="canonical" href="https://nickbelev.github.io/">
 
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="Nick Belev">
+  <meta property="og:title" content="Nicholas Belev">
   <meta property="og:description" content="AI agents for risk analytics at SS&C Algorithmics; private equity forecasting at Aspequity.">
   <meta property="og:url" content="https://nickbelev.github.io/">
   <meta property="og:image" content="https://nickbelev.github.io/assets/images/nicholas-belev.jpg">
   <meta name="twitter:card" content="summary">
 
+  <link rel="icon" href="./favicon.ico" sizes="48x48">
   <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="./assets/images/nicholas-belev.jpg">
+  <link rel="icon" href="./assets/images/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="./site.webmanifest">
+  <meta name="apple-mobile-web-app-title" content="Nicholas Belev">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -115,7 +119,11 @@
       border-radius: var(--radius);
       overflow: hidden;
       box-shadow: 0 30px 80px -30px rgba(0, 0, 0, 0.8);
+      position: relative;
     }
+    .window.is-dragging { transition: none !important; box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.9), 0 0 0 1px var(--line-2); }
+    .titlebar { cursor: grab; touch-action: none; -webkit-user-select: none; user-select: none; }
+    .window.is-dragging .titlebar { cursor: grabbing; }
     .titlebar {
       display: flex; align-items: center; gap: 12px;
       height: 34px; padding: 0 14px;
@@ -159,13 +167,7 @@
     .fetch { display: grid; grid-template-columns: 136px 1fr; gap: 24px; padding: 24px; font-family: var(--mono); font-size: 13px; line-height: 1.8; align-items: center; }
     .fetch-photo { position: relative; border-radius: 8px; overflow: hidden; aspect-ratio: 1; border: 1px solid var(--line); }
     .fetch-photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.08) brightness(.95); transition: filter .5s var(--ease); }
-    .fetch-photo::after {
-      content: ""; position: absolute; inset: 0; pointer-events: none;
-      background: repeating-linear-gradient(0deg, rgba(0,0,0,.22) 0 1px, transparent 1px 3px), linear-gradient(160deg, var(--accent-dim), transparent 60%);
-      transition: opacity .5s var(--ease);
-    }
-    .window:hover .fetch-photo img { filter: none; }
-    .window:hover .fetch-photo::after { opacity: 0; }
+    .window:hover .fetch-photo img, .window.is-lit .fetch-photo img { filter: none; }
     .fetch-head { color: var(--accent); font-weight: 700; }
     .fetch-rule { color: var(--text-3); }
     .fetch dl div { display: flex; gap: 10px; }
@@ -479,7 +481,7 @@
           <article class="module reveal">
             <p class="module-tag">./founder</p>
             <h3>Founder</h3>
-            <p>Co-founded Aspequity, a private equity forecasting business with paying institutional clients. I own development of its C++ cash flow and valuation platform.</p>
+            <p>Co-founded Aspequity, a private equity forecasting business with paying private wealth clients. I own development of its C++ cash flow and valuation platform.</p>
           </article>
         </div>
       </div>
@@ -524,11 +526,11 @@
               <h3><a href="https://aspequity.com/" target="_blank" rel="noopener">Aspequity</a></h3>
               <p class="role">Co-Founder &amp; Chief Technology Officer</p>
               <ul class="points">
-                <li>Co-founded a private equity forecasting software business serving paying institutional clients; own development of its C++ cash flow and valuation modeling platform.</li>
-                <li>Built a pipeline that ingests private equity fund reports into structured historical data, feeding regression-based forecasts of fund contributions, distributions, and NAV.</li>
-                <li>Extended the Yale cash flow modeling framework with historical fund data and regression-based estimation; developed the PostgreSQL infrastructure and am building secure client API access.</li>
+                <li>Co-founded a private equity forecasting software business serving paying private wealth clients; own development of its C++ cash flow and valuation modeling platform.</li>
+                <li>Built a pipeline that ingests private equity fund reports into structured historical data, feeding econometric forecasts of fund contributions, distributions, and NAV.</li>
+                <li>Extended the Yale cash flow modeling framework with historical fund data and econometric estimation; developed the PostgreSQL infrastructure and am building secure client API access.</li>
               </ul>
-              <ul class="stack"><li>C++</li><li>PostgreSQL</li><li>Regression modeling</li><li>Private equity</li></ul>
+              <ul class="stack"><li>C++</li><li>PostgreSQL</li><li>Econometrics</li><li>Private equity</li></ul>
             </div>
           </li>
 
@@ -822,11 +824,39 @@
     var ll = document.querySelector('[data-lastlogin]');
     if (ll) ll.textContent = new Date().toString().split(' ').slice(0, 5).join(' ');
 
-    /* tap a window on touch screens to light its controls */
-    var windows = document.querySelectorAll('.window');
-    document.addEventListener('pointerdown', function (e) {
-      var w = e.target.closest ? e.target.closest('.window') : null;
+    /* windows: select on press, drag by the title bar, last-touched stays on top and lit */
+    var windows = Array.prototype.slice.call(document.querySelectorAll('.window'));
+    var zTop = 60;
+    function select(w) {
       windows.forEach(function (el) { el.classList.toggle('is-lit', el === w); });
+      w.style.zIndex = ++zTop;
+    }
+    windows.forEach(function (w) {
+      w.addEventListener('pointerdown', function () { select(w); });
+      var bar = w.querySelector('.titlebar');
+      if (!bar) return;
+      var x = 0, y = 0;
+      bar.addEventListener('pointerdown', function (e) {
+        if (e.button !== 0) return;
+        e.preventDefault();
+        var sx = e.clientX, sy = e.clientY, bx = x, by = y;
+        w.classList.add('is-dragging');
+        w.style.transition = 'none';
+        try { bar.setPointerCapture(e.pointerId); } catch (err) {}
+        function move(ev) {
+          x = bx + ev.clientX - sx; y = by + ev.clientY - sy;
+          w.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+        }
+        function up() {
+          w.classList.remove('is-dragging');
+          bar.removeEventListener('pointermove', move);
+          bar.removeEventListener('pointerup', up);
+          bar.removeEventListener('pointercancel', up);
+        }
+        bar.addEventListener('pointermove', move);
+        bar.addEventListener('pointerup', up);
+        bar.addEventListener('pointercancel', up);
+      });
     });
 
     var input = document.querySelector('[data-term-input]');
